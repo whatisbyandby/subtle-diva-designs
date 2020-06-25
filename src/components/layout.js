@@ -21,9 +21,18 @@ const theme = {
 }
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    background: url('images/webb.png');
-    color: ${props => props.theme.fontPrimary};
+  html, body {
+    height: 100%;
+    margin: 0;
+    
+  }
+
+  #___gatsby, #gatsby-focus-wrapper {
+    height: 100%;
+  }
+
+  main {
+    height: 100%;
   }
 `
 
@@ -45,8 +54,8 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>
-          <footer>{`© ${new Date().getFullYear()} Scott Perkins`}</footer>
         </div>
+        <footer>{`© ${new Date().getFullYear()} Scott Perkins`}</footer>
       </ThemeProvider>
     </>
   )
