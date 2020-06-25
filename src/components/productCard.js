@@ -8,7 +8,7 @@ const StyledCard = styled.div`
   align-content: center;
   min-height: 300px;
   max-width: 33%;
-  box-shadow: 12px 12px 12px black;
+  box-shadow: 2px 2px 10px grey;
 `
 
 const StyledCardFooter = styled.div``

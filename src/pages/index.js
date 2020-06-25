@@ -1,8 +1,13 @@
 import React from "react"
-import Image from "../components/image"
 import Layout from "../components/layout"
-import styled from "styled-components"
+import HeaderImage from "../components/headerImage"
+import CardContainter from "../components/cardContainer"
 
-const LandingPage = () => <Layout></Layout>
+const LandingPage = () => (
+  <Layout>
+    <HeaderImage />
+    <CardContainter />
+  </Layout>
+)
 
 export default LandingPage

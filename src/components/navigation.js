@@ -1,10 +1,16 @@
 import React from "react"
+import Logo from "./logoImage"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { GrCart } from "react-icons/gr"
+import { FiSearch } from "react-icons/fi"
 
 const StyledNavigation = styled.nav`
   display: flex;
   justify-content: space-around;
+  a {
+    text-decoration: none;
+  }
 
   .right-container {
     display: flex;
@@ -13,9 +19,13 @@ const StyledNavigation = styled.nav`
 
   .cart-container {
     display: flex;
-    justify-content: flex-end;
-    h4 {
-      margin: 1em;
+    justify-content: space-around;
+    padding: 1em;
+    a {
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -24,6 +34,7 @@ const StyledNavigation = styled.nav`
     justify-content: flex-end;
     a {
       margin: 1em;
+      text-decoration: none;
     }
   }
 `
@@ -31,18 +42,21 @@ const StyledNavigation = styled.nav`
 const Navigation = () => {
   return (
     <StyledNavigation>
-      <div className="logo-container">
-        <h3>Logo</h3>
-      </div>
+      <Link to="/" className="logo-container">
+        <h2>Subtle Diva Logo</h2>
+      </Link>
       <div className="right-container">
         <div className="cart-container">
-          <h4>Cart</h4>
-          <h4>Search</h4>
+          <a>
+            <FiSearch size={"1.5em"} />
+          </a>
+          <a>
+            <GrCart size={"1.5em"} />
+          </a>
         </div>
         <div className="link-container">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
           <Link to="/shop">Shop</Link>
+          <Link to="/about">About</Link>
         </div>
       </div>
     </StyledNavigation>
